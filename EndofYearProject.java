@@ -16,6 +16,8 @@ public class EndofYearProject {
 	
 	File apple = new File("Apple.txt");
 	Scanner applescan = new Scanner(apple);
+	String[] strArray = new String[8];
+	int j = 1;
 	int extra =	10;	
 	
 	
@@ -44,14 +46,24 @@ public class EndofYearProject {
 				int hints = 6;
 				System.out.println("");	
 				System.out.println("Level 1:");
-					for(int x = 0; x < 3; x++){
-					String appleq = applescan.nextLine();
-					System.out.println(appleq);	
-						
+					while (applescan.hasNextLine()){
+						String line = applescan.nextLine();
+   						strArray[j] = line;
+   						j++;
 					}
-					
+					System.out.println(strArray[1]);
+					System.out.println(strArray[2]);
+					System.out.println(strArray[3]);
 					System.out.println("What am I?");
+					System.out.println(" ");
 					String answer = input.nextLine();
+					answer = input.nextLine();
+					System.out.println(" ");
+					
+					if (answer.equals(strArray[7])){
+    		 			System.out.println("You got it!!");
+    		 		
+    		 		}
 						//need to compare line 11 to answer, dont know how
 					}	  
 			
